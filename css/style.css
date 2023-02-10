@@ -37,6 +37,14 @@ body{
     color: aliceblue;
 }
 
+img{
+    width: 100%;
+}
+
+p{
+    margin-bottom: 0.8rem;
+}
+
 /* hero */
 
 .hero{
@@ -342,7 +350,7 @@ header nav a:hover{
 @media (max-width:720px){
     .fila{
         flex-direction: column;
-        padding: 0.5rem 1rem;
+        padding: 1rem 0.5rem;
     }
 
     .col-75,
@@ -355,9 +363,300 @@ header nav a:hover{
 
 }
 
+.flex-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex-column-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Espaciados y margenes */
+
+.m-t{
+    margin-top: 1rem;
+}
+
+.m-b{
+    margin-bottom: 1rem;
+}
+
+.m-l{
+    margin-left: 1rem;
+}
+
+.m-r{
+    margin-right: 1rem;
+}
+
+.m-t-small{
+    margin-top: 0.5rem;
+}
+
+.m-b-small{
+    margin-bottom: 0.5rem;
+}
+
+.m-l-small{
+    margin-left: 0.5rem;
+}
+
+.m-r-small{
+    margin-right: 0.5rem;
+}
+
+
 
 /* parallax */
 
 .fila.parallax{
-    background-image: url('');
+    background-image: url('../img/property5.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.fila.parallax{
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 4rem 3rem;
+}
+
+.fila.parallax div p{
+    background-color: rgba(65, 65, 65, 0.75); ;
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Caja navegacion */
+
+.caja-nav img {
+    width: 20%;
+    margin-bottom: 1em;
+}
+
+.caja-nav a{
+    border: 1px solid #dfa12e;
+    background-color: rgba(65, 65, 65, 0.75);
+    color: #dfa12e;
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 0.5rem 1em;
+    cursor: pointer;
+    transition: all ease-in-out 400ms;
+    border-radius: 5px;
+}
+
+.caja-nav a:hover{
+    background-color: #dfa12e;
+    color: #ffffff;
+}
+
+/* Formulario contacto */
+
+form.contacto{
+    width: 50%;
+}
+
+@media (max-width: 720px){
+    form.contacto {
+        width: 75%;
+    }
+}
+
+@media (max-width: 440px){
+    form.contacto {
+        width: 100%;
+    }
+}
+
+form.contacto .fila{
+    padding: 0.8rem;
+}
+
+input{
+    border: none;
+    border-bottom: 1.5px solid #dfa12e;
+    font-size: 1rem;
+    padding: 0.5em 1em;
+    width: 100%;
+    background-color: #7979790e;
+}
+
+input:focus{
+    outline: none;
+    border-bottom: 1.5px solid #dfa12e;
+}
+
+input.usuario{
+    background-image: url(../img/user.svg);
+    background-repeat: no-repeat;
+    background-position: 0 7px;
+    padding-left: 2em;
+}
+
+input.email{
+    background-image: url(../img/mail-bronce.svg);
+    background-repeat: no-repeat;
+    background-position: 0 7px;
+    padding-left: 2em;
+}
+
+ button{
+    border: none;
+    background-color: #dfa12e;
+    color: white;
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 0.5rem 1em;
+    cursor: pointer;
+    transition: all ease-in-out 400ms;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: #88631f;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+input[type="checkbox"] + label::before{
+    content: url("../img/square.svg");
+    position: relative;
+    top: 5px;
+    padding-right: 5px;
+}
+
+input[type="checkbox"]:checked + label::before{
+    content: url("../img/check-square.svg");
+}
+
+/* footer */
+
+footer {
+    background-color: #363636;
+}
+
+footer p{
+    color: #ffffff;
+}
+
+footer p img{
+    width: 8%;
+}
+
+
+footer p:first-child{
+    color: #dfa12e;
+    font-weight: bold;
+}
+
+footer img.rrss{
+    height: 48px;
+    width: 50px;
+}
+
+footer a{
+    font-size: 0.8rem;
+    color: #dfa12e;
+}
+
+footer a:hover{
+    font-size: 0.8rem;
+    color: #ffffff;
+}
+
+footer .copyright{
+    color: #ffffff;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+/* Tarjetas productos */
+
+.fila.grid{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 360px);
+    grid-gap: 1.5rem;
+    justify-content: center;
+}
+
+.card{
+    width: 360px;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 4px rgb(31, 31, 31);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card img{
+    height: 320px;
+}
+
+.card .footer-card{
+    padding: 0.8rem;
+    width: 100%;
+    height: 174px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card .footer-card p{
+    margin-bottom: 0.5rem;
+}
+
+.card .footer-card p:first-child{
+    font-weight: bold;
+}
+
+.card .footer-card a{
+    background-color: #dfa12e;
+    color: white;
+    font-size: 0.8rem;
+    border-radius: 0.3em;
+    padding: 0.5em 1em;
+    align-self: center;
+    transition: 400ms ease-in-out all;
+}
+
+.card .footer-card a:hover{
+    background-color: #9c7223;
+
 }
